@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Compression Algorithms</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(33, 49, 196, 0.552);
+            transition: box-shadow 0.3s;
+        }
+        .container:hover {
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+        }
+        
+        h1, h2 {
+            text-align: center;
+            color: #444;
+        }
+        input[type="text"], textarea, select {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 15px 30px;
+            font-weight: bold;
+            background: linear-gradient(to left ,#00ffff, #0000ff);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 100ms ease-in-out;
+            display: block;
+            margin: 0 auto;
+        }
+        button:hover {
+            background: linear-gradient(to right ,#ff0000, #e48b0e);
+            color: white;
+            transform: scale(1.05);
+            
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Text Compression Algorithms</h1>
+        <input type="text" id="inputText" placeholder="Enter text to encode">
+        
+        <select id="algorithmSelect">
+            <option value="huffman">Huffman Encoding</option>
+            <option value="lzw">LZW Encoding</option>
+            <option value="rle">Run-Length Encoding</option>
+        </select>
+
+        <button id="encodeButton" onclick="encodeText()">Encode</button>
+
+        <h2>Encoded Output</h2>
+        <textarea id="encodedText" rows="10" readonly></textarea>
+    </div>
+
+    <script src="compression.js"></script>
+
+</body>
+</html>
